@@ -1,0 +1,27 @@
+<!-- Stwórz stronę zawierającą podstrony z multimediami.
+gdzie zawarte są kategorie multimediów takie jak:
+Audio
+Video
+PDF
+Canvas
+mapa
+
+Stwórz możliwość wgrywania multimediów(Audio,Video,PDF) w PHP jako plików. 
+https://www.w3schools.com/php/php_file_upload.asp
+
+Na podstronach używaj następujących znaczników aby wyświetlić multimedia:
+1. <audio> Wgraj 4 przykłady jako test w tym jedno z atrybutem autoplay, controls i loop. Użyj jednego standardowego rozmiaru (width i height) dla wszystkich elementów.
+Zawrzyj różne formaty takie jak: MP3, WAV, OGG, MIDI
+https://www.w3schools.com/tags/tag_audio.asp. 
+
+2. <video> Wgraj 4 przykłady jako test w tym jedno z atrybutem loop, muted, autoplay, controls. Użyj jednego standardowego rozmiaru (width i height) dla wszystkich elementów. Zawrzyj różne formaty takie jak: .ogg .mp4 .webm .mov
+https://www.w3schools.com/tags/tag_video.asp
+
+3. <object> Wgraj 2 przykłady jako test zagnieżdźony .PDF. https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html
+
+4. <canvas> 1x zagnieżdźony gdzie narysowany jest domek za pomocą instrukcji JS. https://www.w3schools.com/html/html5_canvas.asp
+
+5. <iframe> 1x zawrzyj mapę swojego ulubionego miejsca w Polsce.
+https://www.maps.ie/create-google-map/
+
+-->
