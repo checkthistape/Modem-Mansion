@@ -7,17 +7,27 @@ function loadFile(){
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    // Allow certain file formats
+    if($imageFileType != "mp4" && $imageFileType != "ogg" && $imageFileType != "webm" ) {
+        echo "Sorry, only MP4, OGG and WEBM files are allowed.";
+        $uploadOk = 0;
+    }
+
     // Check if image file is a actual image or fake image
     if(isset($_POST["submit"]))
     {
-        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-        if($check !== false) {
-            echo "File is an image - " . $check["mime"] . ".";
+        $mime = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
+        if(strstr($mime, "video/")){
+            // this code for video
+            echo "File is video - " ."". ".";
             $uploadOk = 1;
-        } else {
-            echo "File is not an image.";
+        }else {
+            // this code for image
+            echo "File is not video.";
             $uploadOk = 0;
         }
+
 
         // Check if file already exists
         if (file_exists($target_file)) {
@@ -730,6 +740,51 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST')){
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit">
                 </form>
+
+                <?php 
+                    $rawvideos = glob('content/*.*');
+                    natcasesort($rawvideos);
+                    $videos = array();
+                    foreach ($rawvideos as $file) {
+
+                        echo "file: ".$file."</br>";
+
+                        $strictfile = substr($file, strrpos($file, '/') + 1);
+                        echo "strictfile: ".$strictfile."</br>";
+
+                        $extension = substr($file, strrpos($file, '.') + 1);
+                        echo "extension: ".$extension."</br>";
+
+                        $filenoext = substr($file, 0, strlen($extension) + 1);
+                        echo "file no extension: ".$filenoext."</br>";
+
+                        echo '<video width="250px" height="250px" controls loop >';
+                       
+                        echo '<source src="content/' . $strictfile . '" type="' . "video/mp4" . '" autoplay/>';
+                            
+                        
+                        echo '</video>';
+
+                        // if (!isset($videos[$filenoext])) {
+                        //     $videos[$filenoext] = array();
+                        // }
+                        // $videos[$filenoext][] = $extension;
+                    }
+                    $types = array(
+                        'mp4' => 'video/mp4',
+                        'ogg' => 'video/ogg'
+                    );
+                    
+                    // foreach ($videos as $filenoext => $extensions) {
+                    //     echo '<video controls tabindex="0" autoplay>';
+                    //     foreach ($extensions as $extension) {
+                    //         if (isset($types[$extension])) {
+                    //             echo '<source src="' . $filenoext . "." . $extension . '" type="' . $types[$extension] . '" />';
+                    //         }
+                    //     }
+                    //     echo '</video>';
+                    // }
+                ?>
             </div>
 
         </div>
