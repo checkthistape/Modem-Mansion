@@ -745,7 +745,10 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST')){
                     $rawvideos = glob('content/*.*');
                     natcasesort($rawvideos);
                     $videos = array();
+
+                    echo '<div class="row">';
                     foreach ($rawvideos as $file) {
+                        
 
                         echo "file: ".$file."</br>";
 
@@ -770,10 +773,12 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST')){
                         // }
                         // $videos[$filenoext][] = $extension;
                     }
+                    echo '</div>';
                     $types = array(
                         'mp4' => 'video/mp4',
                         'ogg' => 'video/ogg'
                     );
+
                     
                     // foreach ($videos as $filenoext => $extensions) {
                     //     echo '<video controls tabindex="0" autoplay>';
