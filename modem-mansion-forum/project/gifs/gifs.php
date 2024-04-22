@@ -26,7 +26,7 @@ function loadFile(){
 <html>
 
 <head>
-    <title>Map</title>
+    <title>Gifs</title>
     <style>
         /* dakedres was here ;3 */
         ::-webkit-scrollbar {
@@ -641,9 +641,9 @@ function loadFile(){
                         height="32">PDF</a></div>
             <div class="tab"><a href="../canvas/canvas.php"><img class="icon" id="canvas" src="../icons/canvas.png" width="32"
                         height="32">Canvas</a></div>
-            <div class="tab"><a href="map.php" style="text-decoration: underline;"><img class="icon" id="map" src="../icons/map.png" width="32"
+            <div class="tab"><a href="../map/map.php"><img class="icon" id="map" src="../icons/map.png" width="32"
                         height="32">Map</a></div>
-            <div class="tab"><a href="../gifs/gifs.php"><img class="icon" id="gif" src="../icons/gifs.png" width="32"
+            <div class="tab"><a href="gifs.php" style="text-decoration: underline;"><img class="icon" id="gif" src="../icons/gifs.png" width="32"
                         height="32">Gifs</a></div>
         </div>
 

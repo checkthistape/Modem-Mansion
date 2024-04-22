@@ -492,6 +492,7 @@ function loadFile(){
 
 
     </script>
+     <link rel="icon" type="image/x-icon" href="icons/tab/possible-temporary-icon.ico">
 </head>
 
 <body>
@@ -529,7 +530,7 @@ function loadFile(){
                         height="32">Canvas</a></div>
             <div class="tab"><a href="map/map.php"><img class="icon" id="map" src="icons/map.png" width="32"
                         height="32">Map</a></div>
-            <div class="tab"><a href="map/gifs.php"><img class="icon" id="gif" src="icons/gifs.png" width="32"
+            <div class="tab"><a href="gifs/gifs.php"><img class="icon" id="gif" src="icons/gifs.png" width="32"
                         height="32">Gifs</a></div>
         </div>
 

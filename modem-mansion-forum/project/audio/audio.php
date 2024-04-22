@@ -26,7 +26,7 @@ function loadFile(){
 <html>
 
 <head>
-    <title>Hub</title>
+    <title>Audio</title>
     <style>
         /* dakedres was here ;3 */
         ::-webkit-scrollbar {
@@ -605,6 +605,7 @@ function loadFile(){
 
 
     </script>
+    <link rel="icon" type="image/x-icon" href="../icons/tab/possible-temporary-icon.ico">
 </head>
 
 <body>
@@ -707,6 +708,7 @@ function loadFile(){
                         <div class="audio">
                             <audio controls>
                                 <source src="content/super-shy-reff.mp3" type="audio/mpeg">
+                                Your browser does not support the audio tag.
                             </audio>
                         </div>
                         <div class="metadata">
@@ -730,6 +732,7 @@ function loadFile(){
                         <div class="audio">
                             <audio controls>
                                 <source src="content/super-shy-reff.mp3" type="audio/mpeg">
+                                Your browser does not support the audio tag.
                             </audio>
                         </div>
                         <div class="metadata">
@@ -753,6 +756,7 @@ function loadFile(){
                         <div class="audio">
                             <audio controls>
                                 <source src="content/super-shy-reff.mp3" type="audio/mpeg">
+                                Your browser does not support the audio tag.
                             </audio>
                         </div>
                         <div class="metadata">
@@ -821,6 +825,7 @@ function loadFile(){
                         <div class="audio">
                             <audio controls>
                                 <source src="content/super-shy-reff.mp3" type="audio/mpeg">
+                                Your browser does not support the audio tag.
                             </audio>
                         </div>
                         <div class="metadata">
