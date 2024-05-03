@@ -12,10 +12,16 @@
 
             <div class="block3">
                 <a href="/signup" id="reg"><img src="{{ asset('assets/icons/register.png') }}" width="16px" height="16px">Register</a>
-                <a href="" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Login</a>
+                <a href="/login" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Login</a>
             </div>
 
         </div>
+        @if(session()->has('registration-success'))
+        <div class="regmessage" id="regmessage" style="width:100%; height:30px; display:flex; flex-direction: row; overflow: hidden; position: sticky; background-color: green; top: 0; justify-content: space-between;">
+            <p>You have successfully registrated</p>
+            <button style="background-color: none; background: none; border-radius: 40%; width:'5px'; height: '5px';" onclick="document.getElementById('regmessage').style.display = 'none';">X</button>
+        </div>
+        @endif
         <div class="tabs">
             <div class="tab"><a href="audio/audio.php"><img class="icon" id="audio" src="{{ asset('assets/icons/audio.png') }}" width="32" height="32">Audio</a></div>
             <div class="tab"><a href="video/video.php"><img class="icon" id="video" src="{{ asset('assets/icons/video1.png') }}" width="32" height="32">Video</a></div>
@@ -42,3 +48,5 @@
             <p id="info">Forum activity: </p>
             <p id="posts">Posts: <span id="posts-stat">42k</span></p>
         </div>
+
+        

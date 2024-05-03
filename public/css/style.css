@@ -316,38 +316,39 @@ div.right-part div.boards {
 }
 
 div.gen-tabs table.board {
-  
-  width: 100%;
+
+    width: 100%;
 }
 
 table.board,
 table.board td,
 table.board tr {
-    
+
     border: 1px solid black;
     text-align: center;
 }
 
 tr.head-row {
-  height: 40px;
+    height: 40px;
 }
 
 tr.data-row {
-  height: 75px;
+    height: 75px;
 }
 
 tr.divider {
-  height: 30px;
-  
+    height: 30px;
+
 }
+
 tr.divider td#divider-text {
-  text-align: left;
-  padding-left: 33px;
+    text-align: left;
+    padding-left: 33px;
 }
 
 
 table.board td#main {
-    width:500px;
+    width: 500px;
     text-align: left;
     padding-left: 33px;
 }
@@ -357,29 +358,65 @@ table.board td#image {
 }
 
 table.board td#text {
-  width: 240px;
-  text-align: left;
-  padding-left: 10px;
+    width: 240px;
+    text-align: left;
+    padding-left: 10px;
 }
 
 table.board td#threads {
-  width: 40px;
+    width: 40px;
 }
 
 table.board td#posts {
-  width: 40px;
+    width: 40px;
 }
 
 table.board td#moderators {
-  width: 80px;
+    width: 80px;
 }
 
 table.board td#lastpost {
-  width: 140px;
+    width: 140px;
 }
 
 
 /*.~~~~~~~~~~~~.Right part.~~~~~~~~~~~~.*/
+
+/*.~~~~~~~~~~~~.Login/signup.~~~~~~~~~~~~.*/
+div.form-login {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1.9px dashed fuchsia;
+}
+
+div.form-login div.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.inputs div[class^="input"] {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    margin-bottom: 15px;
+
+}
+
+div[class^="input"] input {
+    margin-left: 10px;
+}
+
+
+/*.~~~~~~~~~~~~.Login/signup.~~~~~~~~~~~~.*/
 
 /*.~~~~~~~~~~~~.Footer.~~~~~~~~~~~~.*/
 div.footer {
@@ -445,3 +482,123 @@ div.last-bar div.brick3 p#fogu {
 }
 
 /*.~~~~~~~~~~~~.Footer.~~~~~~~~~~~~.*/
+
+/*.~~~~~~~~~~~~.Profile.~~~~~~~~~~~~.*/
+
+div.profile {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    border: 1.9px dashed fuchsia;
+}
+
+div.profile div.firstPart {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    
+    padding-top: var(--thin-header-padding);
+}
+
+div.firstPart div.info-part {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--thin-header-padding);
+}
+
+div.info-part div.headline {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 10px;
+
+    
+}
+
+div.headline div.displayedname {
+    margin-right: 10px;
+}
+
+div.headline div.status {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+div.status img#statusimg {
+    margin-right: 10px;
+}
+
+div.displayedname span#nickname {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+div.info-part div.live-part {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+
+div.live-part div.profileimage {
+    width: 58%;
+    height: 300px;
+    
+    background-color: red;
+}
+
+div.live-part div.bio {
+    width: 40%;
+    /* border: 1px solid purple; */
+}
+
+div.profile div.secondPart {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    
+}
+div.secondPart div.addinfo {
+    width:70%;
+    height: 400px;
+    
+    border-left: 1.9px dashed gray;
+    border-bottom: 1.9px dashed gray;
+    border-right: 1.9px dashed gray;
+}
+
+div.addinfo div.ab-mecontent {
+    width: 100%;
+    height: 200px;
+}
+
+div.addinfo div.headbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border: 1px solid darkgray;
+
+div.secondPart div.friends {
+    width: 30%;
+    height: 360px;
+    border: 1px solid orange;
+}
+
+/*.~~~~~~~~~~~~.Profile.~~~~~~~~~~~~.*/

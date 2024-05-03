@@ -66,7 +66,7 @@
             {{-- 2. Main --}}
             {{-- 3. Disscusions --}}
             
-            <tr class="divider">
+            <tr class="divider" style="background: url(/assets/gifs/1017.GIF); background-repeat: repeat-x; color: white;">
                 <td colspan="6" id="divider-text">Info Part</td>
             </tr>
             @foreach($board_statuses as $bo_st)

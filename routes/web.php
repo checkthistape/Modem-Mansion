@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\UserTrackController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -16,9 +18,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('home');
 
 Route::get('/board/{id}', [BoardController::class, 'index']);
+
 
 
 Route::get('/login', function () {
@@ -40,3 +43,7 @@ Route::get('/rules', function () {
 Route::get('/guideline', function () {
     return view('guideline');
 });
+
+Route::get("/{username}", [UserProfileController::class, 'index']);
+
+Route::post('/registrate', [UserTrackController::class, 'registrate'])->name('user.registrate');
