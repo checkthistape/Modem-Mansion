@@ -1,0 +1,27 @@
+Forum / old 90s web page references:
+
+https://www.militantesthetix.co.uk/mehome1.htm
+https://novadelta.neocities.org/
+https://forums.somethingawful.com/
+https://bluedwarf.top/cackle/
+https://www.resetera.com/threads/oldest-forums-sites-that-you-still-use.600228/
+https://www.project1999.com/forums/index.php
+https://shmups.system11.org/viewforum.php?f=1&sid=b0f1cfb3866895f803cc2238539733f0
+https://web.archive.org/web/19980109031139/http://anandtech.com/wwwboard/wwwboard.html
+https://www.bluesnews.com/
+https://superpredator.zone/
+
+Additional support pages:
+
+https://forums.debian.net/viewtopic.php?t=150443 - guidances on ssh server access and server firewall
+https://forums.debian.net/viewtopic.php?t=153625 - guide on creating a debian web server
+https://www.linuxcapable.com/how-to-install-fail2ban-on-debian-linux/ - fail2ban configuration
+https://github.com/fail2ban/fail2ban/issues/3292 - fail2ban debian12 issue fixing
+
+https://tenor.com/search/png-gif-90s-stickers - cool 90s gifs
+https://glittercandybox33.blogspot.com/p/glitter-fills.html - cool old glitter textures
+https://www.linkedin.com/pulse/database-structure-user-role-management-aj-february - database structure for such a project
+https://www.linkedin.com/pulse/mastering-git-commit-types-guide-proper-usage-best-practices-sharma - git commits mastering
+https://www.youtube.com/watch?v=O1bi5MjqsAc - understanding db relationship
+https://www.reddit.com/r/typography/comments/mficck/what_were_the_most_popular_fonts_of_the_90s_for/ - old 90s style web fonts
+https://webflow.com/blog/90s-website-design - 14 iconic 90s websites

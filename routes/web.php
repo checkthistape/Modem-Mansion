@@ -3,7 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\UserProfileController;
-use App\Http\Controllers\UserTrackController;
+use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -24,13 +24,13 @@ Route::get('/board/{id}', [BoardController::class, 'index']);
 
 
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [UserAuthController::class, 'indexLogin']);
 
-Route::get('/signup', function () {
-    return view('signup');
-});
+Route::post('/login', [UserAuthController::class, 'indexLogin']);
+
+Route::get('/registrate', [UserAuthController::class, 'indexSignUp']);
+
+Route::post('/registrate', [UserAuthController::class, 'registrate'])->name('user.registrate');
 
 Route::get('/terms', function () {
     return view('terms');
@@ -46,4 +46,4 @@ Route::get('/guideline', function () {
 
 Route::get("/{username}", [UserProfileController::class, 'index']);
 
-Route::post('/registrate', [UserTrackController::class, 'registrate'])->name('user.registrate');
+

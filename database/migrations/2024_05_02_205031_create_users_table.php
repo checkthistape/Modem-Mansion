@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('username', 25);
             $table->string('password', 40);
             $table->dateTime('usershowed');
+            $table->string("ip");
         });
     }
 

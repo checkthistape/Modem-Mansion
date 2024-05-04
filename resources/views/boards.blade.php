@@ -37,36 +37,7 @@
 
             @endforeach
 
-            {{--
-                foreach($boards as $board){
-                    // in 'main boards' show only boards with boardstatusid = 1 ($bo_st->boardstatusid == 1)
-                    // then show divider <tr class='divider'></tr>
-                    // in Forum Hub show only boards with boardstatusid = 2 ($bo_st->boardstatusid == 2)
-                    // in Others show only boards with boardstatusid = 3
-                }   
-                --}}
-
-
-            {{-- @foreach($boards as $board) <tr class="data-row">
-                    <td id="image">image</td>
-                    <td id="text">{{$board->boardname}}</td>
-                    <td id="threads">23</td>
-                    <td id="posts">12</td>
-                    <td id="moderators">mmss</td>
-                    <td id="lastpost">lastpost</td>
-                </tr>
-
-                @endforeach --}}
-
-
-
-
-
-            {{-- 1.Informational --}}
-            {{-- 2. Main --}}
-            {{-- 3. Disscusions --}}
-            
-            <tr class="divider" style="background: url(/assets/gifs/1017.GIF); background-repeat: repeat-x; color: white;">
+            <tr class="divider">
                 <td colspan="6" id="divider-text">Info Part</td>
             </tr>
             @foreach($board_statuses as $bo_st)

@@ -11,7 +11,8 @@
             </div>
 
             <div class="block3">
-                <a href="/signup" id="reg"><img src="{{ asset('assets/icons/register.png') }}" width="16px" height="16px">Register</a>
+               
+                <a href="/registrate" id="reg"><img src="{{ asset('assets/icons/register.png') }}" width="16px" height="16px">Register</a>
                 <a href="/login" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Login</a>
             </div>
 
@@ -44,9 +45,17 @@
             </div>
         </div>
 
+        @if(DB::table('posts')->count()>999)
         <div class="sub-header">
             <p id="info">Forum activity: </p>
-            <p id="posts">Posts: <span id="posts-stat">42k</span></p>
+            <p id="posts">Posts: <span id="posts-stat">{{(DB::table('posts')->count())/1000}}k</span></p>
         </div>
+        @else
+        <div class="sub-header">
+            <p id="info">Forum activity: </p>
+            <p id="posts">Posts: <span id="posts-stat">{{DB::table('posts')->count()}}</span></p>
+        </div>
+
+        @endif
 
         

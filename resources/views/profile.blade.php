@@ -17,7 +17,7 @@
 
             <div class="live-part">
                 <div class="profileimage">
-                    <img src="assets/icons/whoisthatpokemonbw.png" style="object-fit: contain; width: 100%; height: 100%;">
+                    <img src="assets/icons/profileimage.jpeg" style="object-fit: contain; width: 100%; height: 100%;">
                 </div>
                 <div class="bio">bio</div>
             </div>

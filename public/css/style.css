@@ -59,6 +59,8 @@
 
 :root {
     --thin-header-padding: 15px;
+    --forum-a-color: #404;
+    --forum-a-hover-color: purple;
 }
 
 img {
@@ -75,6 +77,23 @@ img {
     user-select: none;
     /* CSS3 */
 }
+
+a {
+    color: var(--forum-a-color);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--forum-a-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--forum-a-hover-color);
+    text-decoration: none;
+}
+
+
 
 div.wrapper {
     background-color: white;
@@ -153,15 +172,6 @@ div.tabs .tab {
     padding-right: 20px;
     font-size: 30px;
     border: 1px solid white;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: #404;
-    text-decoration: underline;
 }
 
 img.icon#video,
@@ -330,6 +340,8 @@ table.board tr {
 
 tr.head-row {
     height: 40px;
+    background: url("/assets/icons/notable-back.gif");
+    background-repeat: repeat-x;
 }
 
 tr.data-row {
@@ -338,6 +350,8 @@ tr.data-row {
 
 tr.divider {
     height: 30px;
+    background: url("/assets/icons/notable-back.gif");
+    background-repeat: repeat-x;
 
 }
 
@@ -594,6 +608,7 @@ div.addinfo div.headbar {
     width: 100%;
     height: 30px;
     border: 1px solid darkgray;
+}
 
 div.secondPart div.friends {
     width: 30%;
