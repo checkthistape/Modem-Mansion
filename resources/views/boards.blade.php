@@ -63,21 +63,6 @@
 
             @endforeach
 
-            
-            <!-- @foreach($boards as $board)
-
-            <tr class="data-row">
-                <td id="image">image</td>
-                <td id="text">{{$board->boardname}}</td>
-                <td id="threads">23</td>
-                <td id="posts">12</td>
-                <td id="moderators">mmss</td>
-                <td id="lastpost">lastpost</td>
-            </tr>
-
-            @endforeach -->
-
-
             <tr class="divider">
                 <td colspan="6" id="divider-text">Forum Hub</td>
             </tr>
@@ -104,14 +89,7 @@
                 @endforeach
 
             @endforeach
-            <!-- <tr class="data-row">
-                    <td id="image">image</td>
-                    <td id="text">text</td>
-                    <td id="threads">Threads</td>
-                    <td id="posts">Posts</td>
-                    <td id="moderators">Moderators</td>
-                    <td id="lastpost">Last post</td>
-                </tr> -->
+            
         </table>
     </div>
     <div class="default-tabs">asd</div>

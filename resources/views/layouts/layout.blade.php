@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Hub</title>
+    <title>Modem Mansion Forum ~ Home</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/icons/tab/possible-temporary-icon.ico') }}"> {{-- "../../icons/tab/possible-temporary-icon.ico"--}}

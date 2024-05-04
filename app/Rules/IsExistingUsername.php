@@ -21,6 +21,7 @@ class IsExistingUsername implements ValidationRule
             $fail("Username does not exist");
         } else {
             // ...
+            echo "ok";
         }
         
     }

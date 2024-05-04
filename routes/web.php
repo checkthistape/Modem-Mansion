@@ -26,7 +26,7 @@ Route::get('/board/{id}', [BoardController::class, 'index']);
 
 Route::get('/login', [UserAuthController::class, 'indexLogin']);
 
-Route::post('/login', [UserAuthController::class, 'indexLogin']);
+Route::post('/login', [UserAuthController::class, 'login'])->name('user.login');
 
 Route::get('/registrate', [UserAuthController::class, 'indexSignUp']);
 

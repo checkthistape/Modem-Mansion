@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests\UserSignupRequest;
 use App\Http\Requests\UserLoginRequest;
 
+use Illuminate\Support\Facades\Auth;
+
 class UserAuthController extends Controller
 {
     public function indexSignUp(){
@@ -83,10 +85,22 @@ class UserAuthController extends Controller
     }
 
     public function login(UserLoginRequest $request){
+        echo "yo!";
         # Retrieve the validated input data
         $validated = $request -> validated();
 
-        dump($_SESSION);
+        //dump($_SESSION);
         dump($validated);
+
+        if(Auth::attempt([
+            'username' => $validated['username'],
+            'password' => $validated['pswd']
+        ])) {
+            echo "Yoyoyoyoyoyoyoyoy!";
+        }
+
+        return back()->withErrors(['password' => "Provided password isn't correct or the username doesn't exist"]);
+
+        
     }
 }
