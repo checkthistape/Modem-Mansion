@@ -13,30 +13,31 @@ use Illuminate\Support\Facades\Auth;
 
 class UserAuthController extends Controller
 {
-    public function indexSignUp(){
+    public function indexSignUp()
+    {
         return view("signup");
     }
 
-    public function indexLogin(){
+    public function indexLogin()
+    {
         return view("login");
     }
 
-    public function registrate(UserSignupRequest $request){
+    public function registrate(UserSignupRequest $request)
+    {
 
         # Retrieve the validated input data
-        $validated = $request -> validated();
+        $validated = $request->validated();
 
         # Creating a record in the database
         $search = DB::select("select * from users where username = ?", array($validated['username']));
-        if(!$search){
+        if (!$search) {
             DB::table('users')->insert([
                 'username' => $validated['username'],
                 'password' => $validated['pswd2'],
                 'usershowed' => date('Y-m-d H:i:s')
             ]);
-            
-        }
-        else {
+        } else {
             abort(500, "Something happened, please refresh the page");
         }
 
@@ -81,18 +82,19 @@ class UserAuthController extends Controller
         //     echo "User with the $supposedUsrName nickname already exists, </br> please consider changing it";
         // }
 
-        
+
     }
 
-    public function login(UserLoginRequest $request){
+    public function login(UserLoginRequest $request)
+    {
         echo "yo!";
         # Retrieve the validated input data
-        $validated = $request -> validated();
+        $validated = $request->validated();
 
         //dump($_SESSION);
         dump($validated);
 
-        if(Auth::attempt([
+        if (Auth::attempt([
             'username' => $validated['username'],
             'password' => $validated['pswd']
         ])) {
@@ -100,7 +102,5 @@ class UserAuthController extends Controller
         }
 
         return back()->withErrors(['password' => "Provided password isn't correct or the username doesn't exist"]);
-
-        
     }
 }

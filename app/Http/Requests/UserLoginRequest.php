@@ -26,7 +26,7 @@ class UserLoginRequest extends FormRequest
         return [
             'username' => ['required', 'min:5', 'max:25', 'regex:/^[a-zA-Z0-9]*/i', new IsExistingUsername],
             'pswd' => ['required', 'min:8', 'max:40']
-            
+
         ];
     }
 }

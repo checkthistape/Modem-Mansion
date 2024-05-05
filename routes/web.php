@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\ThreadController;
+
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Route;
@@ -20,9 +22,9 @@ use Illuminate\Http\Request;
 
 Route::get('/', [DashboardController::class, 'index'])->name('home');
 
-Route::get('/board/{id}', [BoardController::class, 'index']);
+Route::get('/board/{boardid}', [BoardController::class, 'index']);
 
-
+Route::get('board/{boardid}/thread/{threadid}', [ThreadController::class, 'index']);
 
 Route::get('/login', [UserAuthController::class, 'indexLogin']);
 

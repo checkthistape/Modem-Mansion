@@ -27,8 +27,9 @@
         </div>
 
     </div>
-    <p id="end1">Modem Mansion Badges and Cool Sites</p>
-    <p id="end2"> which were used as a reference</p>
+    <p id="end1">Modem Mansion Badges and Cool Sites  </p>
+    <p id="end2">which were used as a reference</p>
+    <p id="end3">or also kept the same idea</p>
     <div class="badgerow1">
         <a target="_blank" href="https://forum.melonland.net"><img alt="Visit the MelonLand Forum!" src="https://forum.melonland.net/images/MELONLAND-FORUM.GIF"></a>
         <a target="_blank" href="https://momg.neocities.org/"><img alt="Visit the Gif Gallery!" src="https://momg.neocities.org/site-images/momg-badge.gif"></a>
@@ -38,9 +39,14 @@
     </div>
 
     <div class="badgerow2">
-        <a target="_blank" href="https://textures.neocities.org/"><img src="https://forum.melonland.net/images/textown-badge.gif"></a>
-        <a target="_blank" href="https://gifypet.neocities.org/"><img src="https://gifypet.neocities.org/images/badge.gif"></a>
-        <a target="_blank" href="https://pixelsea.neocities.org"><img alt="Pixel Sea" src="https://forum.melonland.net/images/pixelsea-badge.gif"></a>
-    </div>
+        <a target="_blank" href="https://textures.neocities.org/"><img class="badge" src="https://forum.melonland.net/images/textown-badge.gif" alt="" ></a>
+        <a target="_blank" href="https://gifypet.neocities.org/"><img class="badge" src="https://gifypet.neocities.org/images/badge.gif"></a>
+        <a target="_blank" href="https://pixelsea.neocities.org"><img class="badge" alt="Pixel Sea" src="https://forum.melonland.net/images/pixelsea-badge.gif"></a>
+        <a target="_blank" href="https://www.project1999.com/"><img class="badge" alt="Visit the Project1999" src="https://www.project1999.com/forums/images/p99_logo_forum_2.png" width=""></a>
+        </div>
 
 </div>
+
+<p id="text" style="font-size:13px;">© {{ date("Y") }} Modem Mansion Forum</p>
+<p id="copyrighttext" style="font-size:10px;">All rights reserved</p>
+        </br>

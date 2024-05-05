@@ -10,16 +10,32 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $threadsNumbArr = [];
-        $threads_numb = DB::select("select boardid_fk, COUNT(*) as thread_count from threads group by boardid_fk");
-        foreach($threads_numb as $thrN){
-            $threadsNumbArr[$thrN->boardid_fk]=$thrN->thread_count;
+        $boards = $this->getBoardsFullAdd();
+        if (!$boards) {
+            echo "There are no badges yet, write to the admin!";
+            # Show the "boards" page with the "There are no badges yet, write to the admin!"
         }
 
-        
 
-        $boards = DB::table('boards')->get();
-        $board_statuses = DB::table("boards_board_statuses")->get();
-        return view("boards", ['boards' => $boards], ['board_statuses' => $board_statuses])->with("threadsNumbArr", $threadsNumbArr);
+
+
+        return view("boards", ['boards' => $boards]);
+    }
+
+    public static function getBoardsFullAdd()
+    {
+        $boards = DB::select(
+            "select boards.*, users.username, board_statuses.boardstatusname, count(threads.threadid) as threads, count(posts.postid) as posts
+            from `boards`
+            left join users on users.userid = boards.createdbyuserid_fk
+            left join board_statuses on board_statuses.boardstatusid = boards.boardstatusid_fk
+            left join threads on threads.boardid_fk = boards.boardid
+            left join posts on posts.threadid_fk = threads.threadid
+            group by boards.boardid"
+        );
+        if (!$boards) {
+            return [];
+        }
+        return $boards;
     }
 }

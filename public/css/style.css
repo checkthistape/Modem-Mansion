@@ -32,8 +32,9 @@ button.windows98button {
 
 button.windows98button:not(:disabled):active {
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
-    
+
 }
+
 button.windows98button:focus {
     outline: 1px dotted #000000;
     outline-offset: -4px;
@@ -55,8 +56,9 @@ input[type="submit"].windows98button {
 
 input[type="submit"].windows98button:not(:disabled):active {
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
-    
+
 }
+
 input[type="submit"].windows98button:focus {
     outline: 1px dotted #000000;
     outline-offset: -4px;
@@ -128,7 +130,8 @@ input[type="submit"].windows98button:focus {
 
 :root {
     --thin-header-padding: 15px;
-    --forum-a-color: #404;
+    --forum-a-color: blue;
+    --forum-a-reserved-color: #404;
     --forum-a-hover-color: purple;
 }
 
@@ -181,6 +184,16 @@ div.wrapper {
     align-items: center;
     padding-left: 200px;
     padding-right: 200px;
+    position: relative;
+}
+
+div.wrapper div.wcag {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border: 1px solid black;
+    bottom: 10px;
+    left: 0;
 }
 
 div.thin-head {
@@ -257,8 +270,8 @@ div.tinynavbar {
     background: url('/assets/icons/fallingleaves.gif');
     justify-content: center;
     align-items: end;
-    padding-bottom:6px;
-    
+    padding-bottom: 6px;
+
 }
 
 div.tinynavbar span {
@@ -280,7 +293,7 @@ img.icon#gif {
 }
 
 div.header {
-    padding: 5px;
+    
     width: 100%;
     border: 1.9px dashed fuchsia;
     width: 100%;
@@ -289,14 +302,21 @@ div.header {
 }
 
 div.header div.logo {
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 43%;
+    background: url("/assets/icons/sunset.png");
+    background-size: cover;
 }
 
 div.header div.welcome {
+    margin-left: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -390,6 +410,10 @@ div.new {
     margin-bottom: 10px;
 }
 
+div.new:last-of-type {
+    margin-bottom: 0px;
+}
+
 div.new div.text {
     padding-left: 25px;
     padding-top: 4px;
@@ -415,13 +439,13 @@ div.new p#title {
 /*.~~~~~~~~~~~~.Right part.~~~~~~~~~~~~.*/
 div.content div.right-part {
     width: 83%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: Thistle;
 }
 
 div.right-part div.boards {
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 div.gen-tabs table.board {
@@ -438,19 +462,38 @@ table.board tr {
 }
 
 tr.head-row {
+    /* font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; */
+    font-style: italic;
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    text-decoration: underline;
+    /* -webkit-text-stroke: 0.8px black; */
+    text-shadow:
+        0.98px 0.98px 0 #000,
+        -0.98px 0.98px 0 #000,
+        -0.98px -0.98px 0 #000,
+        0.98px -0.98px 0 #000;
     height: 40px;
     background: url("/assets/icons/notable-back.gif");
     background-repeat: repeat-x;
 }
 
 tr.data-row {
-    height: 75px;
+    height: 55px;
 }
 
 tr.divider {
+    color: #56FF00;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 21px;
+    text-decoration: underline;
     height: 30px;
-    background: url("/assets/icons/notable-back.gif");
+    /* background: url("/assets/icons/notable-back.gif"); */
+    background: url("/assets/icons/190divideroptimized.gif");
     background-repeat: repeat-x;
+    background-size:cover;
 
 }
 
@@ -461,23 +504,35 @@ tr.divider td#divider-text {
 
 
 table.board td#main {
-    width: 500px;
+    width: 350px;
     text-align: left;
     padding-left: 33px;
 }
 
 table.board td#image {
-    width: 30px;
+    width: 10px;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+table.board td#image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    width:45px;
+    height:45px;
 }
 
 table.board td#text {
-    width: 240px;
+    width: 500px;
     text-align: left;
     padding-left: 10px;
 }
 
 table.board td#threads {
-    width: 40px;
+    width: 20px;
 }
 
 table.board td#posts {
@@ -505,7 +560,10 @@ div.form-content {
 
 div.form-content div.heading {
     width: 100%;
-    border: 1px solid #404;
+    border-top: 1px solid #404;
+    border-left: 1px solid #404;
+    border-right: 1px solid #404;
+    border-bottom: 1px solid #404;
     padding-left: var(--thin-header-padding);
     padding-top: 3px;
     padding-bottom: 3px;
@@ -523,7 +581,11 @@ div.form-content div.form-login {
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: 1.9px dashed fuchsia;
+    /* border: 1.9px dashed fuchsia; */
+    border-top: 0px solid #404;
+    border-left: 1.9px dashed fuchsia;
+    border-right: 1.9px dashed fuchsia;
+    border-bottom: 1.9px dashed fuchsia;
     position: relative;
     z-index: 1;
 }
@@ -617,8 +679,9 @@ div.last-bar div.brick1 {
 div.last-bar div.brick2 p {
     margin-left: 3px;
     margin-right: 3px;
-    
+
 }
+
 div.last-bar div.brick2 a {
     text-decoration: underline;
     color: white;
@@ -646,7 +709,7 @@ div.last-bar div.brick3 p#fogu {
 
 div.footer p[id^="end"]:last-of-type {
     /*...*/
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 
@@ -771,6 +834,11 @@ div.secondPart div.friends {
     width: 30%;
     height: 360px;
     border: 1px solid orange;
+}
+
+img.badge {
+    width: 88px;
+    height: 31px;
 }
 
 /*.~~~~~~~~~~~~.Profile.~~~~~~~~~~~~.*/

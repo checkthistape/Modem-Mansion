@@ -1,6 +1,6 @@
         <div class="thin-head">
             <div class="block1">
-                <a href="/"><img id="rlogo" src="" width="180px" height="27px"></a>
+                <a href="/"><img id="rlogo" src="/assets/icons/r-logo/logo4.gif" width="180px" height="27px"></a>
                 <p id="since">20 Apr 2024 -
                     <?php echo date("d M Y"); ?>
                 </p>
@@ -34,13 +34,15 @@
 
         </div>
         <div class="tinynavbar">
-            <a href=""><span>Home</span></a>
+            <a href="/"><span>Home</span></a>
             <span>|</span>
-            <a href=""><span>News</span></a>
+            <a href=""><span>What's New</span></a>
             <span>|</span>
             <a href=""><span>Search</span></a>
             <span>|</span>
             <a href=""><span>Mail</span></a>
+            <span>|</span>
+            <a href=""><span>News</span></a>
             <span>|</span>
             <a href=""><span>Ideas</span></a>
             <span>|</span>

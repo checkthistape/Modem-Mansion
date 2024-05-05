@@ -10,89 +10,77 @@
 
                 <td>Threads</td>
                 <td>Posts</td>
-                <td>Moderators</td>
                 <td>Last post</td>
             </tr>
 
-            @foreach($board_statuses as $bo_st)
-                @foreach($boards as $board)
-                    @if ($bo_st->boardstatusid == 1)
+            @foreach($boards as $board)
 
-                        @if ($bo_st->boardid == (($board->boardid)))
-                            <tr class="data-row">
-                                <td id="image">image</td>
-                                <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
-                                <td id="threads">{{ isset($threadsNumbArr[($board->boardid)]) ? $threadsNumbArr[($board->boardid)] : 0 }}</td>
-                                <td id="posts">12</td>
-                                <td id="moderators">mmss</td>
-                                <td id="lastpost">lastpost</td>
-                            </tr>
-                        @else
-
-                        @endif
-
-
-                    @endif
-                @endforeach
-
-            @endforeach
-
+            @if ($board->boardstatusid_fk == 1)
+            @once
             <tr class="divider">
-                <td colspan="6" id="divider-text">Info Part</td>
+                <td colspan="6" id="divider-text">{{$board->boardstatusname}}</td>
             </tr>
-            @foreach($board_statuses as $bo_st)
-                @foreach($boards as $board)
-                    @if ($bo_st->boardstatusid == 2)
+            @endonce
+            <tr class="data-row">
+                <td id="image"><img src="/assets/icons/error5.gif"></td>
+                <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
+                <td id="threads">{{ $board->threads }}</td>
+                <td id="posts">{{ $board->posts }}</td>
 
-                        @if ($bo_st->boardid == (($board->boardid)))
-                            <tr class="data-row">
-                                <td id="image">image</td>
-                                <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
-                                <td id="threads">{{ isset($threadsNumbArr[($board->boardid)]) ? $threadsNumbArr[($board->boardid)] : 0 }}</td>
-                                <td id="posts">12</td>
-                                <td id="moderators">mmss</td>
-                                <td id="lastpost">lastpost</td>
-                            </tr>
-                        @else
-
-                        @endif
-
-
-                    @endif
-                @endforeach
-
-            @endforeach
-
-            <tr class="divider">
-                <td colspan="6" id="divider-text">Forum Hub</td>
+                <td id="lastpost">lastpost</td>
             </tr>
 
-            @foreach($board_statuses as $bo_st)
-                @foreach($boards as $board)
-                    @if ($bo_st->boardstatusid == 3)
+            @endif
 
-                        @if ($bo_st->boardid == (($board->boardid)))
-                            <tr class="data-row">
-                                <td id="image">image</td>
-                                <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
-                                <td id="threads">{{ isset($threadsNumbArr[($board->boardid)]) ? $threadsNumbArr[($board->boardid)] : 0 }}</td>
-                                <td id="posts">12</td>
-                                <td id="moderators">mmss</td>
-                                <td id="lastpost">lastpost</td>
-                            </tr>
-                        @else
-
-                        @endif
-
-
-                    @endif
-                @endforeach
 
             @endforeach
-            
+
+
+            @foreach($boards as $board)
+
+            @if ($board->boardstatusid_fk == 2)
+            @once
+            <tr class="divider">
+                <td colspan="6" id="divider-text">{{$board->boardstatusname}}</td>
+            </tr>
+            @endonce
+            <tr class="data-row">
+                <td id="image"><img src="/assets/icons/error5.gif"></td>
+                <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
+                <td id="threads">{{ $board->threads }}</td>
+                <td id="posts">{{ $board->posts }}</td>
+
+                <td id="lastpost">lastpost</td>
+            </tr>
+            @endif
+
+
+            @endforeach
+
+            @foreach($boards as $board)
+
+            @if ($board->boardstatusid_fk == 3)
+            @once
+            <tr class="divider">
+                <td colspan="6" id="divider-text">{{$board->boardstatusname}}</td>
+            </tr>
+            @endonce
+            <tr class="data-row">
+                <td id="image"><img src="/assets/icons/error5.gif"></td>
+                <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
+                <td id="threads">{{ $board->threads }}</td>
+                <td id="posts">{{ $board->posts }}</td>
+
+                <td id="lastpost">lastpost</td>
+            </tr>
+            @endif
+
+
+            @endforeach
+
         </table>
     </div>
-    <div class="default-tabs">asd</div>
+    <div class="default-tabs"></div>
 
 
 </div>

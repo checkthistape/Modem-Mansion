@@ -17,23 +17,23 @@ class IsUniqueUsername implements ValidationRule
     {
         $string = preg_replace('/\s+/', '', $value);
         $search = DB::select("select * from users where username = ?", array($string));
-        if(!$search){
+        if (!$search) {
             //$fail('"'.$string.'"'." wow, there is no so user, you can pass!");
-        }
-        else {
+        } else {
             $fail("The username has already been Taken");
         }
         // echo 'User IP - '.$_SERVER['REMOTE_ADDR']."</br>";
-        
+
         #("The username is already taken, fuck!");
     }
 
-    public function passes($attribute, mixed $value): bool 
+    public function passes($attribute, mixed $value): bool
     {
-        return false;    
+        return false;
     }
 
-    public function message(){
+    public function message()
+    {
         return '';
     }
 }

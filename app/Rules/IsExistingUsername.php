@@ -17,12 +17,11 @@ class IsExistingUsername implements ValidationRule
     {
         $string = preg_replace('/\s+/', '', $value);
         $search = DB::select("select * from users where username = ?", array($string));
-        if(!$search){
+        if (!$search) {
             $fail("Username does not exist");
         } else {
             // ...
             echo "ok";
         }
-        
     }
 }

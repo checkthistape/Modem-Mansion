@@ -6,7 +6,7 @@
     <div class="gen-tabs">
         <table class="board" id="gen">
             <tr class="head-row">
-                <td colspan="3" id="main">Threads</td>
+                <td colspan="3" id="main">Main boards</td>
 
                 <td>Started by</td>
                 <td>Posts</td>
@@ -14,14 +14,14 @@
                 <td>Last post</td>
             </tr>
 
-            @foreach($threads as $thread)
+            @foreach($posts as $post)
 
             <tr class="data-row">
                 <td id="image">image</td>
                 <td id="image">image</td>
-                <td id="text"><a href="/{{Request::path()}}/thread/{{$thread->threadid}}">{{$thread->threadname}}</a></td>
-                <td id="lastpost"><a href="/{{$thread->username}}">{{$thread->username}}</a></td>
-                <td id="posts">{{$thread->post_count}}</td>
+                <td id="text">{{$post->posttext}}</td>
+                <td id="lastpost"><a href="/{{$post->username}}">{{$post->username}}</a></td>
+                <td id="posts">{{$post->postdate}}</td>
                 <!-- <td id="moderators">mmss</td> -->
                 <td id="lastpost">lastpost</td>
             </tr>
