@@ -24,10 +24,19 @@
             <tr class="data-row">
                 <td id="image"><img src="/assets/icons/error5.gif"></td>
                 <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
-                <td id="threads">{{ $board->threads }}</td>
-                <td id="posts">{{ $board->posts }}</td>
+                <td id="threads">{{ $board->thread_count }}</td>
+                <td id="posts">{{ $board->post_count }}</td>
 
-                <td id="lastpost">lastpost</td>
+                <td id="lastpost">
+                    @if (empty($board->last_post_id))
+                    There are no posts yet :(
+                    @else
+
+                    {{ $board->last_post_date }}</br>
+                    by <a href="/{{$board->last_posted_by_username}}">{{ $board->last_posted_by_username}}</a>
+
+                    @endif
+                </td>
             </tr>
 
             @endif
@@ -47,10 +56,19 @@
             <tr class="data-row">
                 <td id="image"><img src="/assets/icons/error5.gif"></td>
                 <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
-                <td id="threads">{{ $board->threads }}</td>
-                <td id="posts">{{ $board->posts }}</td>
+                <td id="threads">{{ $board->thread_count }}</td>
+                <td id="posts">{{ $board->post_count }}</td>
 
-                <td id="lastpost">lastpost</td>
+                <td id="lastpost">
+                    @if (empty($board->last_post_id))
+                    There are no posts yet :(
+                    @else
+
+                    {{ $board->last_post_date }}</br>
+                    by <a href="/{{$board->last_posted_by_username}}">{{ $board->last_posted_by_username}}</a>
+
+                    @endif
+                </td>
             </tr>
             @endif
 
@@ -68,10 +86,19 @@
             <tr class="data-row">
                 <td id="image"><img src="/assets/icons/error5.gif"></td>
                 <td id="text"><a href="/board/{{$board->boardid}}">{{$board->boardname}}</a></td>
-                <td id="threads">{{ $board->threads }}</td>
-                <td id="posts">{{ $board->posts }}</td>
+                <td id="threads">{{ $board->thread_count }}</td>
+                <td id="posts">{{ $board->post_count }}</td>
 
-                <td id="lastpost">lastpost</td>
+                <td id="lastpost">
+                    @if (empty($board->last_post_id))
+                    There are no posts yet :(
+                    @else
+
+                    {{ $board->last_post_date }}</br>
+                    by <a href="/{{$board->last_posted_by_username}}">{{ $board->last_posted_by_username}}</a>
+
+                    @endif
+                </td>
             </tr>
             @endif
 
