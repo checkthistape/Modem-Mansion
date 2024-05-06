@@ -16,14 +16,23 @@
 
             @foreach($threads as $thread)
 
-            <tr class="data-row">
+            <tr class="data-row thread">
                 <td id="image">image</td>
                 <td id="image">image</td>
                 <td id="text"><a href="/{{Request::path()}}/thread/{{$thread->threadid}}">{{$thread->threadname}}</a></td>
-                <td id="lastpost"><a href="/{{$thread->username}}">{{$thread->username}}</a></td>
+                <td id="lastpost"><a href="/{{$thread->thread_starter_username}}">{{$thread->thread_starter_username}}</a></td>
                 <td id="posts">{{$thread->post_count}}</td>
                 <!-- <td id="moderators">mmss</td> -->
-                <td id="lastpost">lastpost</td>
+                <td id="lastpost">
+                    @if (empty($thread->last_post_id))
+                        There are no posts yet :(
+                    @else
+
+                        {{ $thread->last_post_date }}</br>
+                        by <a href="/{{$thread->last_username}}">{{ $thread->last_username}}</a>
+
+                    @endif
+                </td>
             </tr>
 
             @endforeach

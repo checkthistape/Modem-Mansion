@@ -34,16 +34,16 @@
                     <p id="title">Departments</p>
                     <div class="text">
                         <ul>
-                            <a href="">
+                            <a href="/underconstruction">
                                 <li>Discussion Forums</li>
                             </a>
-                            <a href="">
+                            <a target="_blank" href="https://discord.gg/xjQ8fBmww9">
                                 <li>Discord Server</li>
                             </a>
-                            <a href="">
+                            <a href="/underconstruction">
                                 <li>Mail Bag</li>
                             </a>
-                            <a href="">
+                            <a href="/underconstruction">
                                 <li>Feeds & Services</li>
                             </a>
                         </ul>

@@ -25,40 +25,40 @@
         </div>
         @endif
         <div class="tabs">
-            <div class="tab"><a href="audio/audio.php"><img class="icon" id="audio" src="{{ asset('assets/icons/audio.png') }}" width="32" height="32">Home</a></div>
-            <div class="tab"><a href="video/video.php"><img class="icon" id="video" src="{{ asset('assets/icons/video1.png') }}" width="32" height="32">Search</a></div>
-            <div class="tab"><a href="pdf/pdf.php"><img class="icon" id="pdf" src="{{ asset('assets/icons/pdf.png') }}" width="32" height="32">Memes</a></div>
-            <div class="tab"><a href="gifs/gifs.php"><img class="icon" id="gif" src="{{ asset('assets/icons/gifs.png') }}" width="32" height="32">Gifs</a></div>
-            <div class="tab"><a href="canvas/canvas.php"><img class="icon" id="canvas" src="{{ asset('assets/icons/canvas.png') }}" width="32" height="32">Ranking</a></div>
-            <div class="tab"><a href="map/map.php"><img class="icon" id="map" src="{{ asset('assets/icons/map.png') }}" width="32" height="32">Map</a></div>
+            <div class="tab"><a href="/"><img class="icon" id="audio" src="{{ asset('assets/icons/audio.png') }}" width="32" height="32">Home</a></div>
+            <div class="tab"><a href="/underconstruction"><img class="icon" id="video" src="{{ asset('assets/icons/video1.png') }}" width="32" height="32">Search</a></div>
+            <div class="tab"><a href="/underconstruction"><img class="icon" id="pdf" src="{{ asset('assets/icons/pdf.png') }}" width="32" height="32">Memes</a></div>
+            <div class="tab"><a href="/underconstruction"><img class="icon" id="gif" src="{{ asset('assets/icons/gifs.png') }}" width="32" height="32">Gifs</a></div>
+            <div class="tab"><a href="/underconstruction"><img class="icon" id="canvas" src="{{ asset('assets/icons/canvas.png') }}" width="32" height="32">Ranking</a></div>
+            <div class="tab"><a href="/underconstruction"><img class="icon" id="map" src="{{ asset('assets/icons/map.png') }}" width="32" height="32">Map</a></div>
 
         </div>
         <div class="tinynavbar">
             <a href="/"><span>Home</span></a>
             <span>|</span>
-            <a href=""><span>What's New</span></a>
+            <a href="/underconstruction"><span>What's New</span></a>
             <span>|</span>
-            <a href=""><span>Search</span></a>
+            <a href="/underconstruction"><span>Search</span></a>
             <span>|</span>
-            <a href=""><span>Mail</span></a>
+            <a href="/underconstruction"><span>Mail</span></a>
             <span>|</span>
             <a href=""><span>News</span></a>
             <span>|</span>
             <a href=""><span>Ideas</span></a>
             <span>|</span>
-            <a href=""><span>Hosted Sites</span></a>
+            <a href="/underconstruction"><span>Hosted Sites</span></a>
             <span>|</span>
-            <a href=""><span>Invite</span></a>
+            <a href="/underconstruction"><span>Invite</span></a>
             <span>|</span>
-            <a href=""><span>Memes</span></a>
+            <a href="/underconstruction"><span>Memes</span></a>
             <span>|</span>
-            <a href=""><span>Discord</span></a>
+            <a target="_blank" href="https://discord.gg/xjQ8fBmww9"><span>Discord</span></a>
             <span>|</span>
-            <a href=""><span>Gifs</span></a>
+            <a href="/underconstruction"><span>Gifs</span></a>
             <span>|</span>
-            <a href=""><span>Events</span></a>
+            <a href="/underconstruction"><span>Events</span></a>
             <span>|</span>
-            <a href=""><span>Forums</span></a>
+            <a href="/underconstruction"><span>Forums</span></a>
             <span>|</span>
             <a href=""><span>Profile</span></a>
         </div>
@@ -80,12 +80,12 @@
 
         @if(DB::table('posts')->count()>999)
         <div class="sub-header">
-            <p id="info">Forum activity: </p>
+            <p id="info">Forum activity:  <span>(ง'̀-'́)ง</span></p>
             <p id="posts">Posts: <span id="posts-stat">{{(DB::table('posts')->count())/1000}}k</span></p>
         </div>
         @else
         <div class="sub-header">
-            <p id="info">Forum activity: </p>
+            <p id="info">Forum activity:  <span>(ง'̀-'́)ง</span></p>
             <p id="posts">Posts: <span id="posts-stat">{{DB::table('posts')->count()}}</span></p>
         </div>
 

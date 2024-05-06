@@ -46,6 +46,10 @@ Route::get('/guideline', function () {
     return view('guideline');
 });
 
-Route::get("/{username}", [UserProfileController::class, 'index']);
+Route::get('/underconstruction', function () {
+    return view('underconstruction');
+});
+
+Route::get('/{username}', [UserProfileController::class, 'index']);
 
 

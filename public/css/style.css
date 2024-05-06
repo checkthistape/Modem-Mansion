@@ -293,7 +293,7 @@ img.icon#gif {
 }
 
 div.header {
-    
+
     width: 100%;
     border: 1.9px dashed fuchsia;
     width: 100%;
@@ -382,6 +382,30 @@ div.content {
     /* border: 1px solid fuchsia; */
     margin-bottom: 15px;
 }
+
+/*.~~~~~~~~~~~~.Page Message.~~~~~~~~~~~~.*/
+div.content div.pagemessage {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("/assets/icons/giphy3.gif");
+    /* background-size: cover; */
+    
+    color: white;
+    
+    font-size: 80px;
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 2px;
+    -webkit-text-stroke: 1.5px black;
+}
+
+/*.~~~~~~~~~~~~.Page Message.~~~~~~~~~~~~.*/
 
 /*.~~~~~~~~~~~~.Left part.~~~~~~~~~~~~.*/
 div.content div.left-part {
@@ -483,6 +507,15 @@ tr.data-row {
     height: 55px;
 }
 
+tr.thread:nth-child(even) {
+    background-color: #df8dff;
+    color: yellow;
+}
+
+tr.thread:nth-child(even) a {
+    color: peru;
+}
+
 tr.divider {
     color: #56FF00;
     font-style: italic;
@@ -493,7 +526,7 @@ tr.divider {
     /* background: url("/assets/icons/notable-back.gif"); */
     background: url("/assets/icons/190divideroptimized.gif");
     background-repeat: repeat-x;
-    background-size:cover;
+    background-size: cover;
 
 }
 
@@ -513,7 +546,7 @@ table.board td#image {
     width: 10px;
     text-align: center;
     vertical-align: middle;
-    
+
 }
 
 table.board td#image img {
@@ -521,8 +554,8 @@ table.board td#image img {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid black;
-    width:45px;
-    height:45px;
+    width: 45px;
+    height: 45px;
 }
 
 table.board td#text {
@@ -715,6 +748,8 @@ div.footer p[id^="end"]:last-of-type {
 
 
 /*.~~~~~~~~~~~~.Footer.~~~~~~~~~~~~.*/
+
+
 
 /*.~~~~~~~~~~~~.Profile.~~~~~~~~~~~~.*/
 
