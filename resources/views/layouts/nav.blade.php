@@ -11,10 +11,24 @@
             </div>
 
             <div class="block3">
+
+
                 @guest
                 <a href="/registrate" id="reg"><img src="{{ asset('assets/icons/register.png') }}" width="16px" height="16px">Register</a>
                 <a href="/login" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Login</a>
                 @endguest
+
+                @auth()
+                <a href="/{{Auth::user()->username}}" id="logs" style="margin-right: 12px;">{{Auth::user()->username}}</a>
+                <form action="{{ route('user.logout') }}" method="POST">
+                @csrf
+                <button type="submit">Log out</button>
+               </form>
+                <a href="/login" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Log out</a>
+
+                @endauth
+
+
             </div>
 
         </div>
@@ -76,16 +90,23 @@
                 </p>
             </div>
             @endguest
+            @auth()
+            <div class="welcome">
+                <p>There are <span id="bold-l">4040040040</span> unread messages. </br>
+                    <span id="bold-p"><?php echo date("M d, Y"); ?></span> - What's on your mind?
+                </p>
+            </div>
+            @endauth
         </div>
 
         @if(DB::table('posts')->count()>999)
         <div class="sub-header">
-            <p id="info">Forum activity:  <span>(ง'̀-'́)ง</span></p>
+            <p id="info">Forum activity: <span>(ง'̀-'́)ง</span></p>
             <p id="posts">Posts: <span id="posts-stat">{{(DB::table('posts')->count())/1000}}k</span></p>
         </div>
         @else
         <div class="sub-header">
-            <p id="info">Forum activity:  <span>(ง'̀-'́)ง</span></p>
+            <p id="info">Forum activity: <span>(ง'̀-'́)ง</span></p>
             <p id="posts">Posts: <span id="posts-stat">{{DB::table('posts')->count()}}</span></p>
         </div>
 

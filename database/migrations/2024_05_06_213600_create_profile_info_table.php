@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('profile_info', function (Blueprint $table) {
             $table->integer('profileid', true);
-            $table->string('displayname', 40);
-            $table->binary('profileimage');
+            $table->string('displayname', 40)->unique('displayname');
+            $table->binary('profileimage')->nullable();
             $table->string('description')->nullable();
             $table->integer('userid_fk')->unique('userid_fk');
         });

@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('boards_board_statuses', function (Blueprint $table) {
-            $table->integer('boardid')->unique('boardid');
-            $table->integer('boardstatusid')->index('boardstatusid');
+        Schema::create('users', function (Blueprint $table) {
+            $table->integer('userid', true);
+            $table->string('username', 25);
+            $table->string('password',53);
+            $table->string('password', 40);
+            $table->dateTime('usershowed');
         });
     }
 
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('boards_board_statuses');
+        Schema::dropIfExists('users');
     }
 };

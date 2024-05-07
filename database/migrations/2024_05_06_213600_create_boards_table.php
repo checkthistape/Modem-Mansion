@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('boarddesc')->nullable();
             $table->dateTime('datecreated');
             $table->integer('createdbyuserid_fk')->index('createdbyuserid_fk');
+            $table->integer('boardstatusid_fk')->index('boardstatusid_fk');
         });
     }
 

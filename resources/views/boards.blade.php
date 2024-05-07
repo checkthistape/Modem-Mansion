@@ -32,7 +32,7 @@
                     There are no posts yet :(
                     @else
 
-                    {{ $board->last_post_date }}</br>
+                    {{ $newformat = date('M d, Y H:i',strtotime($board->last_post_date)) }}</br>
                     by <a href="/{{$board->last_posted_by_username}}">{{ $board->last_posted_by_username}}</a>
 
                     @endif
@@ -64,7 +64,7 @@
                     There are no posts yet :(
                     @else
 
-                    {{ $board->last_post_date }}</br>
+                    {{ $newformat = date('M d, Y H:i',strtotime($board->last_post_date)) }}</br>
                     by <a href="/{{$board->last_posted_by_username}}">{{ $board->last_posted_by_username}}</a>
 
                     @endif
@@ -94,7 +94,7 @@
                     There are no posts yet :(
                     @else
 
-                    {{ $board->last_post_date }}</br>
+                    {{ $newformat = date('M d, Y H:i',strtotime($board->last_post_date)) }}</br>
                     by <a href="/{{$board->last_posted_by_username}}">{{ $board->last_posted_by_username}}</a>
 
                     @endif

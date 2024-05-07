@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->integer('postid', true);
-            $table->text('posttext');
-            $table->integer('postedbyuserid_fk')->index('postedbyuserid_fk');
-            $table->integer('threadid_fk')->index('threadid_fk');
+        Schema::create('new_categories', function (Blueprint $table) {
+            $table->integer('newcategoryid', true);
+            $table->string('newcategoryname');
+            $table->dateTime('newcategorydate');
+            $table->integer('newcategorycreatedbyid_fk')->index('newcategorycreatedbyid_fk');
         });
     }
 
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('new_categories');
     }
 };

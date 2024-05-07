@@ -39,11 +39,15 @@
     </div>
 
     <div class="badgerow2">
-        <a target="_blank" href="https://textures.neocities.org/"><img class="badge" src="https://forum.melonland.net/images/textown-badge.gif" alt="" ></a>
+        <a target="_blank" href="https://textures.neocities.org/"><img class="badge" src="https://forum.melonland.net/images/textown-badge.gif" alt="TexTown Badge that links to its site" ></a>
         <a target="_blank" href="https://gifypet.neocities.org/"><img class="badge" src="https://gifypet.neocities.org/images/badge.gif"></a>
         <a target="_blank" href="https://pixelsea.neocities.org"><img class="badge" alt="Pixel Sea" src="https://forum.melonland.net/images/pixelsea-badge.gif"></a>
         <a target="_blank" href="https://www.project1999.com/"><img class="badge" alt="Visit the Project1999" src="https://www.project1999.com/forums/images/p99_logo_forum_2.png" width=""></a>
-        </div>
+    </div>
+
+    <div class="badgerow3">
+    <a target="_blank" href="https://www.project1999.com/"><img class="badge" alt="Visit the XPOFF.com" src="https://xpoff.com/images/logo.png" width="" alt="XPOFF.com forum logo that links to its site"></a>
+    </div>
 
 </div>
 

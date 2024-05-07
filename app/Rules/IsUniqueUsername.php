@@ -16,7 +16,7 @@ class IsUniqueUsername implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         $string = preg_replace('/\s+/', '', $value);
-        $search = DB::select("select * from users where username = ?", array($string));
+        $search = DB::select("select * from profile_info where displayname = ?", array($string));
         if (!$search) {
             //$fail('"'.$string.'"'." wow, there is no so user, you can pass!");
         } else {

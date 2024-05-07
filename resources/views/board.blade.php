@@ -27,8 +27,8 @@
                     @if (empty($thread->last_post_id))
                         There are no posts yet :(
                     @else
-
-                        {{ $thread->last_post_date }}</br>
+                        
+                        {{ $newformat = date('M d, Y H:i',strtotime($thread->last_post_date)) }}</br>
                         by <a href="/{{$thread->last_username}}">{{ $thread->last_username}}</a>
 
                     @endif

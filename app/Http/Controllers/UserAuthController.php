@@ -10,6 +10,7 @@ use App\Http\Requests\UserSignupRequest;
 use App\Http\Requests\UserLoginRequest;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserAuthController extends Controller
 {
@@ -30,13 +31,28 @@ class UserAuthController extends Controller
         $validated = $request->validated();
 
         # Creating a record in the database
-        $search = DB::select("select * from users where username = ?", array($validated['username']));
+        $search = DB::select("select * from profile_info where displayname = ?", array($validated['username']));
         if (!$search) {
             DB::table('users')->insert([
                 'username' => $validated['username'],
-                'password' => $validated['pswd2'],
+                'password' => Hash::make($validated['pswd2']),
                 'usershowed' => date('Y-m-d H:i:s')
             ]);
+
+            $userid_fk = DB::table('users')->select('userid')->orderByDesc("userid")->limit(1)->get()[0]->userid;
+
+            DB::table('profile_info')->insert([
+                'displayname' => $validated['username'],
+                'description' => "User hasn't edited it yet",
+                'userid_fk' => $userid_fk
+            ]);
+
+            $summary = DB::table('profile_info')->where('displayname', '=', $validated['username'])->limit(1)->get();
+            if (!$summary) {
+                abort(500, "Something happened, please refresh the page");
+            }
+
+            #Is it safe to do so? userid_fk => "select userid from userid order by userid desc limit 1"?? How can it be improved?
         } else {
             abort(500, "Something happened, please refresh the page");
         }
@@ -87,20 +103,31 @@ class UserAuthController extends Controller
 
     public function login(UserLoginRequest $request)
     {
-        echo "yo!";
+
         # Retrieve the validated input data
         $validated = $request->validated();
 
-        //dump($_SESSION);
-        dump($validated);
-
-        if (Auth::attempt([
+        if (auth()->attempt([
             'username' => $validated['username'],
-            'password' => $validated['pswd']
+            'password' => $validated['pswd'] # Hash::make($validated['pswd'])
         ])) {
-            echo "Yoyoyoyoyoyoyoyoy!";
+
+            request()->session()->regenerate();
+
+            echo "Auth user: " . Auth::user() . "";
+
+            return redirect()->route("home");
         }
 
-        return back()->withErrors(['password' => "Provided password isn't correct or the username doesn't exist"]);
+        return redirect()->route("user.login")->withErrors(['pswd' => "Provided password isn't correct or the username doesn't exist"]);
+    }
+
+    public function logout(){
+        auth()->logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerate();
+        
+        return redirect()->route("home");
     }
 }

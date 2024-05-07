@@ -1,13 +1,15 @@
 @extends("layouts.signlayout")
 
 @section("content")
+@foreach($profile as $p)
+@once
 <div class="profile">
     <div class="firstPart">
         <div class="info-part">
 
             <div class="headline">
                 <div class="displayedname">
-                    <span id="nickname">checkthistape</span>
+                    <span id="nickname">{{$p->displayname}}</span>
                 </div>
                 <div class="status">
                     <img src="assets/icons/status.png" id="statusimg">
@@ -19,7 +21,7 @@
                 <div class="profileimage">
                     <img src="assets/icons/profileimage.jpeg" style="object-fit: contain; width: 100%; height: 100%;">
                 </div>
-                <div class="bio">bio</div>
+                <div class="bio">{{$p->description}}</div>
             </div>
         </div>
     </div>
@@ -39,4 +41,6 @@
         <div class="friends">friends</div>
     </div>
 </div>
+@endonce
+@endforeach
 @endsection

@@ -6,8 +6,8 @@
         <span>Login page</span>
     </div>
     <div class="form-login">
-        <img src="assets/icons/leafs.png" id="green1" width="146.3px" height="219.5px">
-        <img src="assets/icons/leafs2.png" id="green2" width="154px" height="297px">
+        <img src="assets/icons/oldcomputerleafs.png" id="green1" width="146.3px" height="219.5px">
+        <img src="assets/icons/oldcomputerleafs2.png" id="green2" width="154px" height="297px">
 
 
         <form action="{{ route('user.login') }}" method="post">

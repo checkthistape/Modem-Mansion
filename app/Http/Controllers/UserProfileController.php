@@ -10,18 +10,38 @@ class UserProfileController extends Controller
     public function index($username)
     {
 
-        $users = DB::select("select * from users where username = ?", array($username));
+        //$users = DB::select("select * from users where username = ?", array($username));
+
 
         //dump($users);
-        if (!$users) {
-            //echo "Damn, it seems there is no the user named ".$username;
+        if (!$this->userExists($username)) {
             abort(404);
-        } else {
-            //return "Hello ".$username;
-            return view("profile");
-        }
+        } 
+        
+        $profile = $this->getProfileInfo($username);
+
+        return view("profile", ['profile' => $profile]);
 
 
         //return view("board", ["threads" => $threads]);
+    }
+
+    public static function userExists($username)
+    {
+        if (!DB::select("select * from profile_info where displayname = ?", array($username))) {
+            echo "yoyo, threadcontrolller exists";
+            return false;
+        }
+        return true;
+    }
+
+    public static function getProfileInfo($username)
+    {
+        $profileinfo = DB::select("select profile_info.* from profile_info where displayname=?", array($username));
+        if (!$profileinfo) {
+            echo "this user doesn't have any info";
+            return [];
+        }
+        return $profileinfo;
     }
 }
