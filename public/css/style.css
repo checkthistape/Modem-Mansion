@@ -498,6 +498,49 @@ div.right-part div.boards {
     /* border: 1px solid blue; */
 }
 
+div.gen-tabs table.posts {
+    width: 100%;
+}
+
+/*.~~~~~~~~~~~~.Table posts.~~~~~~~~~~~~.*/
+
+table.posts,
+table.posts td,
+table.posts tr {
+
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+table.posts td#main {
+    text-align: start;
+    padding-left: 33px;
+    
+
+}
+
+table.posts tr.data-row {
+    height: 120px;
+}
+
+table.posts tr.data-row td#back {
+    width: 50px;
+    background: url("/assets/icons/fallingleaves.gif");
+    
+}
+table.posts tr.data-row td#posttext {
+    text-align: start;
+    padding-left:8px;
+    
+}
+
+table.posts tr.data-row td#autor {
+    width: 280px;
+}
+
+/*.~~~~~~~~~~~~.Table posts.~~~~~~~~~~~~.*/
+
 div.gen-tabs table.board {
 
     width: 100%;

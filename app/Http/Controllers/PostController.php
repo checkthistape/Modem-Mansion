@@ -37,6 +37,7 @@ class PostController extends Controller
             }
 
             # return 404
+            abort(404);
         }
 
         # return you are not logged in

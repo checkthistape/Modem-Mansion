@@ -40,7 +40,7 @@ class ThreadController extends Controller
         //     echo $post->postedbyuserid_fk." </br>";
         // }
 
-        return view("thread", ["posts" => $posts]);
+        return view("posts", ["posts" => $posts]);
     }
 
     public static function threadExists($threadid)
