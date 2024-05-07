@@ -32,6 +32,18 @@
 
 
         </table>
+        @auth()
+        <div class="post-input" style="width: 100%; border: 1px solid black; bottom: 0;">
+            <form action="{{route("post.create")}}" method="POST">
+                @csrf
+                <textarea id="postinput" style="width: 100%; height: 90px; resize: none; font-size: 19px;" name="posttextarea"></textarea>
+                <div class="lowpanel" style="width: 100%; border: 1px solid black; height: 32px;">
+                    <button type="submit">Send</button>
+
+                </div>
+            </form>
+        </div>
+        @endauth
     </div>
     <div class="default-tabs"></div>
 

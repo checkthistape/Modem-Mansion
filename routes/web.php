@@ -4,6 +4,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\ThreadController;
 
+use App\Http\Controllers\PostController;
+
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +37,8 @@ Route::post('/logout', [UserAuthController::class,'logout'])->name('user.logout'
 Route::get('/registrate', [UserAuthController::class, 'indexSignUp']);
 
 Route::post('/registrate', [UserAuthController::class, 'registrate'])->name('user.registrate');
+
+Route::post('/postcreate', [PostController::class, 'createPost'])->name('post.create');
 
 Route::get('/terms', function () {
     return view('terms');

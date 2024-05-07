@@ -19,12 +19,12 @@
                 @endguest
 
                 @auth()
-                <a href="/{{Auth::user()->username}}" id="logs" style="margin-right: 12px;">{{Auth::user()->username}}</a>
+                <a href="/{{Auth::user()->username}}" id="profile">{{Auth::user()->username}}</a>
                 <form action="{{ route('user.logout') }}" method="POST">
                 @csrf
-                <button type="submit">Log out</button>
+                <img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px"> <button id="logoutbtn" type="submit">Log out</button>
                </form>
-                <a href="/login" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Log out</a>
+                <!-- <a href="/login" id="log"><img src="{{ asset('assets/icons/login.png') }}" width="16px" height="16px">Log out</a> -->
 
                 @endauth
 

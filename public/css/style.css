@@ -208,8 +208,33 @@ div.thin-head {
     background-color: Thistle;
 }
 
+div.block3 form {
+    padding: 0;
+    margin: 0;
+}
+
+button#logoutbtn {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-family:TimesNewRoman;
+    text-decoration: underline;
+    font-size: 16px;
+    color: var(--forum-a-color);
+    cursor: pointer;
+    font:inherit;
+    margin-right: var(--thin-header-padding);
+    margin-left:-4px;
+}
+
+button#logoutbtn:hover {
+    text-decoration: none;
+    color: var(--forum-a-hover-color);
+}
+
 div.block3 a#reg,
-div.block3 a#log {
+div.block3 a#log,
+div.block3 a#profile {
     margin-right: var(--thin-header-padding);
 }
 
@@ -465,6 +490,7 @@ div.content div.right-part {
     width: 83%;
     /* border: 1px solid red; */
     background-color: Thistle;
+    position: relative;
 }
 
 div.right-part div.boards {
@@ -475,6 +501,7 @@ div.right-part div.boards {
 div.gen-tabs table.board {
 
     width: 100%;
+    
 }
 
 table.board,
