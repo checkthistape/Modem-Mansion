@@ -21,7 +21,19 @@
                 <td id="back"></td>
                 <td id="posttext">{{$post->posttext}}</td>
                 <td id="back"></td>
-                <td id="autor"><a href="/{{$post->username}}">{{$post->username}}</a></td>
+                <td id="autor">
+                    <div class="autorcanvas">
+                        <a href="/{{$post->username}}">{{$post->username}}</a>
+                        <div class="frame">
+                            <img id="frame" src="/assets/icons/frame.png">
+                            
+                        </div>
+                        
+                       
+                    </div>
+                    
+                
+                </td>
                 <!-- <td id="moderators">mmss</td> -->
                 
             </tr>

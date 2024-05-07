@@ -529,6 +529,13 @@ table.posts tr.data-row td#back {
     background: url("/assets/icons/fallingleaves.gif");
     
 }
+
+img#frame{
+    background: url("/assets/icons/profileimage.jpeg");
+    background-size: cover;
+    width:"200px";
+    height: "200px";
+}
 table.posts tr.data-row td#posttext {
     text-align: start;
     padding-left:8px;
@@ -537,6 +544,13 @@ table.posts tr.data-row td#posttext {
 
 table.posts tr.data-row td#autor {
     width: 280px;
+    
+}
+
+table.posts tr.data-row td#autor div.autorcanvas {
+    display: flex;
+    flex-direction: column;
+
 }
 
 /*.~~~~~~~~~~~~.Table posts.~~~~~~~~~~~~.*/
