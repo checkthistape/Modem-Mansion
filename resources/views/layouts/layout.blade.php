@@ -11,6 +11,8 @@
     <script type="text/javascript">
         window.onload = function() {
             randomBanner();
+            ReadingFromCookie();
+            
         };
     </script>
 
@@ -19,8 +21,9 @@
 <body>
 
     <div class="wrapper">
-        <div class="wcag">
-            <img src="/assets/icons/Aa_icon.png" width="40" height="40">
+        <div class="wcag-bar">
+            <div class=""><img src="/assets/icons/alarge-icon.png" width="40" height="40" onclick="setFontSizeCookie('150%')"></div>
+           <div class=""><img src="/assets/icons/asmall-icon.png" width="40" height="40" onclick="setFontSizeCookie('100%')"></div>
         </div>
 
         @include("layouts.nav")

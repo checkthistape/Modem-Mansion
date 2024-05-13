@@ -128,6 +128,10 @@ input[type="submit"].windows98button:focus {
 
 }
 
+html {
+    font-size: 100%;
+}
+
 :root {
     --thin-header-padding: 15px;
     --forum-a-color: blue;
@@ -187,9 +191,9 @@ div.wrapper {
     position: relative;
 }
 
-div.wrapper div.wcag {
+div.wrapper div.wcag-bar {
     width: 40px;
-    height: 40px;
+    height: 90px;
     position: fixed;
     border: 1px solid black;
     bottom: 10px;
