@@ -195,9 +195,27 @@ div.wrapper div.wcag-bar {
     width: 40px;
     height: 90px;
     position: fixed;
-    border: 1px solid black;
-    bottom: 10px;
+    /* border: 1px solid black; */
+    bottom: 12px;
     left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    
+}
+
+div.wcag-bar div[class$="block"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+div.wcag-bar img[id$="Ic"] {
+    cursor: pointer;
+    border: 1px dashed red;
+    width:60px; 
+    height:60px;
 }
 
 div.thin-head {
@@ -962,6 +980,78 @@ div.secondPart div.friends {
 img.badge {
     width: 88px;
     height: 31px;
+    background-color: white;
 }
 
 /*.~~~~~~~~~~~~.Profile.~~~~~~~~~~~~.*/
+
+/*.~~~~~~~~~~~~.Dark Mode.~~~~~~~~~~~~.*/
+div.wrapper.night {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: relative;
+}
+
+div.tabs .tab.night {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+div.gen-tabs table.board.night {
+
+    width: 100%;
+    color: black;
+    
+}
+
+div.wcag-bar div[class$="block night"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+div.wcag-bar img[id$="Ic night"] {
+    cursor: pointer;
+    border: 1px dashed red;
+    width:60px; 
+    height:60px;
+}
+
+p#since.night {
+    font-size: 12px;
+    font-family: Arial;
+    font-style: italic;
+    color: black;
+}
+
+div.thin-head.night div.block1.night {
+    color: black;
+}
+
+div.form-content div.form-login.night {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    /* border: 1.9px dashed fuchsia; */
+    border-top: 0px solid #404;
+    border-left: 1.9px dashed fuchsia;
+    border-right: 1.9px dashed fuchsia;
+    border-bottom: 1.9px dashed fuchsia;
+    position: relative;
+    z-index: 1;
+}
+
+/*.~~~~~~~~~~~~.Dark Mode.~~~~~~~~~~~~.*/

@@ -1,17 +1,50 @@
+const cookieExpDays = 14;
+
+// Cookies names
+const cookieFontSizeName = "fontSizePercents";
+const cookieThemeStateName = "themeState";
+
 function randomBanner() {
     var rlogosrc = "/assets/icons/r-logo/logo" + (Math.floor(Math.random() * 30) + 1) + ".gif";
     document.getElementById("rlogo").src = rlogosrc;
 
 }
 
+function toTheMoon() {
+    window.scrollTo(0, 0);
+}
+
+function night() {
+    const allElements = document.querySelectorAll("*");
+
+    allElements.forEach(element => {
+        if (element.classList.length > 0) {
+            element.classList.add("night");
+        }
+    });
+
+    setCookie(cookieThemeStateName, 'n', cookieExpDays);
+}
+
+function day() {
+    const allElements = document.querySelectorAll("*");
+
+    allElements.forEach(element => {
+        if(element.classList.length > 0) {
+            element.classList.remove("night");
+        }
+    });
+
+    setCookie(cookieThemeStateName, 'd', cookieExpDays);
+}
+
 function setFontSize(fontsizev) {
     document.querySelector("*").style.fontSize = fontsizev;
-    //setCookie("fontSizePercents", fontsizep+'%');
 }
 
 function setFontSizeCookie(fontsizev) {
     document.querySelector("*").style.fontSize = fontsizev;
-    setCookie("fontSizePercents", fontsizev);
+    setCookie(cookieFontSizeName, fontsizev, cookieExpDays);
 }
 
 function setCookie(name, value, exdays) {
@@ -25,33 +58,29 @@ function getCookie(cname) {
     var re = new RegExp(cname + "=([^;]+)");
     var value = re.exec(document.cookie);
     return (value != null) ? unescape(value[1]) : null;
-
-
-    // let name = cname + "=";
-    // const decodedCookie = decodeURIComponent(document.cookie);
-
-    // let ca = decodedCookie.split(';');
-    // for (let i = 0; i < ca.length; i++) {
-    //     let c = ca[i];
-    //     while (c.charAt(0) == ' ') {
-    //         c = c.substring(1);
-    //     }
-    //     if (c.indexOf(name) == 0) {
-    //         return c.substring(name.length, c.length);
-    //     }
-    // }
-    // return "";
 }
 
 function ReadingFromCookie() {
-    let fontsizecookie = getCookie("fontSizePercents");
-    console.log(fontsizecookie);
+    let fontsizecookie = getCookie(cookieFontSizeName);
+    let themestatement = getCookie(cookieThemeStateName);
+    //console.log(fontsizecookie);
 
     if (fontsizecookie != "") {
         setFontSize(fontsizecookie);
     } else {
-        setCookie("fontSizePercents", "100%", 14);
+        setCookie(cookieFontSizeName, "100%", cookieExpDays);
         // there is no
+    }
+
+    if (themestatement != "") {
+        if(themestatement === 'd') {
+            day();
+        }
+        else if(themestatement === 'n') {
+            night();
+        }
+    } else {
+        day();
     }
 
 }

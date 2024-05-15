@@ -12,7 +12,7 @@
         window.onload = function() {
             randomBanner();
             ReadingFromCookie();
-            
+
         };
     </script>
 
@@ -20,10 +20,20 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
         <div class="wcag-bar">
-            <div class=""><img src="/assets/icons/alarge-icon.png" width="40" height="40" onclick="setFontSizeCookie('150%')"></div>
-           <div class=""><img src="/assets/icons/asmall-icon.png" width="40" height="40" onclick="setFontSizeCookie('100%')"></div>
+            <div class="left-block">
+                <div class=""><img src="/assets/icons/top-icon.png" onclick="toTheMoon()" id="topIc" alt="Go to the top"></div>
+                <div class=""><img src="/assets/icons/alarge-icon.png" onclick="setFontSizeCookie('150%')" id="largeIc" alt="Make font size larger"></div>
+                <div class=""><img src="/assets/icons/asmall-icon.png" onclick="setFontSizeCookie('100%')" id="smallIc" alt="Make font size normal"></div>
+            </div>
+
+            <div class="right-block">
+            <div class=""><img src="/assets/icons/sun-icon.png" onclick="day()" id="dayIc"></div>
+                <div class=""><img src="/assets/icons/moon-icon.png" onclick="night()" id="nightIc"></div>
+            </div>
+
+
         </div>
 
         @include("layouts.nav")
