@@ -64,7 +64,7 @@ class ThreadController extends Controller
 
     public static function postsInThread($threadid)
     {
-        $posts = DB::select("select posts.posttext, posts.postdate, users.username from posts inner join users on posts.postedbyuserid_fk = users.userid where posts.threadid_fk = ?", array($threadid));
+        $posts = DB::select("select posts.postid, posts.posttext, posts.postdate, users.username from posts inner join users on posts.postedbyuserid_fk = users.userid where posts.threadid_fk = ?", array($threadid));
         if (!$posts) {
             echo "there are no posts in threads";
             return [];

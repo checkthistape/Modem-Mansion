@@ -8,8 +8,12 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/icons/tab/possible-temporary-icon.ico') }}"> {{-- "../../icons/tab/possible-temporary-icon.ico"--}}
 
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <script type="text/javascript">
         window.onload = function() {
+            tinymce.init({
+                selector: '#postinput'
+            });
             randomBanner();
             ReadingFromCookie();
         };

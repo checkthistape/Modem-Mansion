@@ -458,7 +458,7 @@ div.content div.pagemessage {
 div.content div.left-part {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
     width: 16%;
     /* border:1px solid red; */
@@ -551,6 +551,17 @@ table.posts tr.data-row td#back {
     background: url("/assets/icons/fallingleaves.gif");
     
 }
+
+table.posts tr.data-row td#posttext {
+    position: relative;
+}
+
+tr.data-row td#posttext div.dlt-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 
 img#frame{
     background: url("/assets/icons/profileimage.jpeg");
@@ -1054,4 +1065,8 @@ div.form-content div.form-login.night {
     z-index: 1;
 }
 
+div.gen-tabs table.posts.night {
+    width: 100%;
+    color: black;
+}
 /*.~~~~~~~~~~~~.Dark Mode.~~~~~~~~~~~~.*/

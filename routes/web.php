@@ -40,6 +40,8 @@ Route::post('/registrate', [UserAuthController::class, 'registrate'])->name('use
 
 Route::post('/postcreate', [PostController::class, 'createPost'])->name('post.create');
 
+Route::post('/postdelete', [PostController::class, 'deletePost'])->name('post.delete');
+
 Route::get('/terms', function () {
     return view('terms');
 });
