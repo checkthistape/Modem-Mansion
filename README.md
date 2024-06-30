@@ -7,60 +7,46 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+<a href="http://modem-mansion.ddns.net"><img src="https://raw.githubusercontent.com/checkthistape/Modem-Mansion-visage/main/resources/main%20page.png" width="" height=""></a>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Modem-Mansion-visage
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+http://modem-mansion.ddns.net
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Modem Mansion is another try to recreate that nostalgic web design charm of the 1990s.
+Our project offers 90s web forum features and user interaction tools, serving as a digital sanctuary for web enthusiasts. Our purpose is to protest against the boringness of modern web design, continuing and supporting the Web Revival Movement and [Melon's](https://melonking.net/thoughts/manifesto) manifesto, which has been a big inspiration for this project.
+Focused on community engagement, Modem Mansion provides an immersive environment for users to connect, share, and explore the charm of the early internet web world together.
 
-## Learning Laravel
+____
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Change Log
+All notable changes to this project will be documented in this file.
+ 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+ 
+## [Unreleased]
+ 
+Your ideas and feedback are valuable in shaping the future of Modem Mansion.
+ 
+### Added
+- Gif Wall (<em>page where the user's gifs form a 'wall'</em>).
+- Global Map (<em>page with a global map anonymously displaying user connections worldwide by markers on countries</em>).
+- Profile customization
+ 
+### Changed
+ - <strong>PATCH</strong> Post page design is changed.
+### Fixed
+ 
+## [1.0] - 2024-05-05
+  
+After months of work, we are excited to release Modem Mansion, an online sanctuary for web enthusiasts seeking a nostalgic web experience.
+This version introduces fundamental forum functionality, allowing users to watch boards, create topics, write posts, and sign up or sign in.
+ 
+### Added
+ 
+- <strong>MAJOR</strong> Implemented basic forum functionality (writing posts, creating threads, watching boards).
+- <strong>MAJOR</strong> Implemented Sign Up | Sign In system.
+- <strong>FEATURE</strong> Every user profile can be displayed by going to /[usernickname] (e.g. /chcktstp) <em>(like on github :3).</em>
+- <strong>MINOR</strong> Basic accessibility elements have been implemented (increasing | decreasing font size, day mode | night mode). 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
